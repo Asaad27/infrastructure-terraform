@@ -1,0 +1,24 @@
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: react-deployment
+spec:
+  replicas: 3
+  #number of replicas generated
+  selector:
+    #assigns labels to the pods for future selection
+    matchLabels:
+      app: react
+      version: v01
+  template:
+    metadata:
+      labels:
+        app: react
+        version: v01
+    spec:
+      containers:
+      - name: testit-container
+        image: react
+        ports:
+        - containerPort: 80
