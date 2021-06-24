@@ -17,6 +17,7 @@ spec:
       containers:
       - name: flask
         image: asaad27/my_repo:latest
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
         env:
