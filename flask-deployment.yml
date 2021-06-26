@@ -19,7 +19,7 @@ spec:
         image: asaad27/my_repo:latest
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 80
+        - containerPort: 5000
         env:
         - name: FLASK_ENV
           value: "development"
